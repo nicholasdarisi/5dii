@@ -25,12 +25,13 @@ public class Controller implements ActionListener {
 			int x = d.genera_n();
 			//System.out.println(" "+x);
 			int n = view.getTextField();
-			if (d.check(n)) {
+			if (d.check(n) == 1) {
 				view.setRisposta("Hai vinto!");
 			}
 			else {
 				view.setN_tent(d.dec_tent());
-				view.setRisposta("Riprova...");
+				if (d.check(n) == 2) view.setRisposta("Riprova con un numero maggiore...");
+				if (d.check(n) == 0) view.setRisposta("Riprova con un numero minore...");
 			}
 		}
 		

@@ -42,10 +42,13 @@ public class Data {
 		tentativi = 0;
 	}
 	
-	public boolean check (int n) {
-		if (numero == n) return true;
+	public int check (int n) {
+		if (numero == n) return 1;
+		if (numero > n) return 2;
+		return 0;
 		
-		return false;
+		
+		
 	}
 	
 }
