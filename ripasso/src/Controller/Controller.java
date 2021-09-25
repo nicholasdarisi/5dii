@@ -20,7 +20,7 @@ public class Controller implements ActionListener {
 		// TODO Auto-generated method stub
 		view.setN_tent(5);
 		if (e.getSource() == view.getBottone()) {
-			if (d.getTentativi() == 0) view.setRisposta("Hai perso, tentativi finiti");
+			if (d.getTentativi() > 0) {
 			//System.out.println("ciao");
 			int x = d.genera_n();
 			//System.out.println(" "+x);
@@ -33,6 +33,8 @@ public class Controller implements ActionListener {
 				if (d.check(n) == 2) view.setRisposta("Riprova con un numero maggiore...");
 				if (d.check(n) == 0) view.setRisposta("Riprova con un numero minore...");
 			}
+		}
+			else view.setRisposta("Hai perso, tentativi finiti");
 		}
 		
 	}

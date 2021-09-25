@@ -1,5 +1,4 @@
 package Model;
-//prova
 public class Data {
 	
 	private int numero;
@@ -46,8 +45,6 @@ public class Data {
 		if (numero == n) return 1;
 		if (numero > n) return 2;
 		return 0;
-		
-		
 		
 	}
 	
